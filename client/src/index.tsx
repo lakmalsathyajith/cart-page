@@ -3,9 +3,8 @@ import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 
 import './index.css';
-import ProductList from './ProductList.tsxbak';
 import Product from './pages/Product';
-import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
+import { QueryClient } from 'react-query';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 import store from './store/store';

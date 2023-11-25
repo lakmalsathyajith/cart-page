@@ -37,7 +37,7 @@ const StyledPage = styled.div`
 
 interface PageContainerProps {
   children?: ReactNode;
-  onCategoryClick?: () => Event;
+  onCategoryClick: () => Event;
 }
 
 const PageContainer = ({
