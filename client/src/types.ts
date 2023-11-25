@@ -1,36 +1,36 @@
-export type Category = {
+export interface Category {
   name: string;
   categoryArticles: CategoryArticle;
   articleCount: number;
   childrenCategories: ChildCategory;
   parent?: string;
-};
+}
 
-export type Article = {
+export interface Article {
   name: string;
   variantName: string;
   prices: Prices;
   images: Image[];
-};
+}
 
-export type ChildCategory = {
+export interface ChildCategory {
   list: Array<{
     name: string;
     urlPath: string;
   }>;
-};
+}
 
-export type Prices = {
+export interface Prices {
   currency: string;
   regular: {
     value: number;
   };
-};
+}
 
-export type Image = {
+export interface Image {
   path: string;
-};
+}
 
-export type CategoryArticle = {
+export interface CategoryArticle {
   articles: Article[];
-};
+}
