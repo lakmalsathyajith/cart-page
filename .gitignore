@@ -1,0 +1,327 @@
+# User-specific files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Workspace specific files
+.code-workspace
+
+# User-specific files
+.idea/
+
+# Sensitive or high-churn files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Visual Studio Code directories
+.vscode/
+.history/
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+# .vscode/extensions.json can be ignored when using ESLint+Prettier+EditorConfig
+.vscode/extensions.json
+.vscode/*.yml
+.vscode/*.yaml
+.vscode/*.json
+.vscode/*.md
+.vscode/*.xml
+.vscode/*.png
+.vscode/*.code-workspace
+
+# TSLint
+tslint-report*.txt
+tslint*.json
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# Rust
+target/
+
+# Eclipse
+.project
+.buildpath
+
+# NetBeans
+/nbproject/private/
+/nbproject/Makefile-*
+/nbproject/Package-*
+/nbproject/bundle-*/
+
+# Gradle
+.gradle
+/build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+CMakeFiles
+CMakeTmp/
+
+# virtualenv
+venv/
+ENV/
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# User-specific files
+.idea/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+# .vscode/extensions.json can be ignored when using ESLint+Prettier+EditorConfig
+.vscode/extensions.json
+.vscode/*.yml
+.vscode/*.yaml
+.vscode/*.json
+.vscode/*.md
+.vscode/*.xml
+.vscode/*.png
+.vscode/*.code-workspace
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+# .vscode/extensions.json can be ignored when using ESLint+Prettier+EditorConfig
+.vscode/extensions.json
+.vscode/*.yml
+.vscode/*.yaml
+.vscode/*.json
+.vscode/*.md
+.vscode/*.xml
+.vscode/*.png
+.vscode/*.code-workspace
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+# .vscode/extensions.json can be ignored when using ESLint+Prettier+EditorConfig
+.vscode/extensions.json
+.vscode/*.yml
+.vscode/*.yaml
+.vscode/*.json
+.vscode/*.md
+.vscode/*.xml
+.vscode/*.png
+.vscode/*.code-workspace
+
+# User-specific files
+.idea/
+
+# Sensitive or high-churn files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code directories
+.vscode/
+.history/
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+# .vscode/extensions.json can be ignored when using ESLint+Prettier+EditorConfig
+.vscode/extensions.json
+.vscode/*.yml
+.vscode/*.yaml
+.vscode/*.json
+.vscode/*.md
+.vscode/*.xml
+.vscode/*.png
+.vscode/*.code-workspace
+
+# User-specific files
+.idea/
+
+# Sensitive or high-churn files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+# .vscode/extensions.json can be ignored when using ESLint+Prettier+EditorConfig
+.vscode/extensions.json
+.vscode/*.yml
+.vscode/*.yaml
+.vscode/*.json
+.vscode/*.md
+.vscode/*.xml
+.vscode/*.png
+.vscode/*.code-workspace
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.
+
+#node module
+server/node_modules
+client/node_modules
+
+#micellanious
+.DS_Store
