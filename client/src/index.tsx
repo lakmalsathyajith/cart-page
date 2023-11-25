@@ -6,6 +6,8 @@ import './index.css';
 import Product from './pages/Product';
 import { QueryClient } from 'react-query';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { Global } from '@emotion/react';
+import globalStyles from './styles/GlobalStyles';
 
 import store from './store/store';
 
@@ -37,6 +39,7 @@ root.render(
     {/* <ProductList /> */}
     <Provider store={store}>
       <ApolloProvider client={client}>
+        <Global styles={globalStyles} />
         <Product />
       </ApolloProvider>
     </Provider>
