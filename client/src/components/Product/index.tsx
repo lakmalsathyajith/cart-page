@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Article } from '../../types';
-import Button from '../Button';
+import Button from '../Base/Button';
 
 import styled from '@emotion/styled';
 

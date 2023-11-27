@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useQuery } from '@apollo/client';
-import type { ApolloError } from '@apollo/client/errors';
 import { useDispatch } from 'react-redux';
 import { GET_CATEGORIES } from '../data/actions/categoryActions';
 import {
@@ -10,15 +9,13 @@ import {
   addActiveCategory
 } from '../store/slices/productSlice';
 
-type refetch = (categoryId: any, locale: any) => Promise<void>;
+import type { categoryQueryType } from '../types/hooks.types';
+import type { Category } from '../types';
 
-interface categoryQueryType {
-  error: ApolloError | undefined;
-  loading: boolean;
-  reFetch: refetch;
-}
-
-const useCategoryQuery = (categoryId, locale): categoryQueryType => {
+const useCategoryQuery = (
+  categoryId: string[],
+  locale: string
+): categoryQueryType => {
   const dispatch = useDispatch();
 
   const { loading, error, data, refetch } = useQuery(GET_CATEGORIES, {
@@ -26,7 +23,10 @@ const useCategoryQuery = (categoryId, locale): categoryQueryType => {
     fetchPolicy: 'network-only'
   });
 
-  const reFetch = async (categoryId, locale): Promise<void> => {
+  const reFetch = async (
+    categoryId: string[],
+    locale: string
+  ): Promise<void> => {
     try {
       await refetch({ categoryId, locale });
     } catch (error) {
@@ -44,9 +44,11 @@ const useCategoryQuery = (categoryId, locale): categoryQueryType => {
         articleCount,
         id: parentId
       } = categories[0];
-      const updatedCategories = childrenCategories.list.map((category) => {
-        return { ...category, parent: parentId };
-      });
+      const updatedCategories = childrenCategories.list.map(
+        (category: Category) => {
+          return { ...category, parent: parentId };
+        }
+      );
       dispatch(addMeta({ name, articleCount, id: parentId }));
       dispatch(addCategories(updatedCategories));
       dispatch(addProducts(categoryArticles.articles));

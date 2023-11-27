@@ -3,13 +3,6 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 import { Filter } from '@emotion-icons/octicons';
 
-const toolbarStyles = css`
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: #f0f0f0;
-`;
-
 const iconStyles = css`
   width: 18px;
   height: 18px;
@@ -45,7 +38,11 @@ const StyledToolbar = styled.section`
     margin-bottom: 20px;
   }
 `;
-const Toolbar = ({ toggleFilterOpen }): JSX.Element => {
+interface ToolbarProps {
+  toggleFilterOpen: () => void;
+}
+
+const Toolbar = ({ toggleFilterOpen }: ToolbarProps): JSX.Element => {
   return (
     <StyledToolbar>
       <StyledFilter onClick={toggleFilterOpen} />

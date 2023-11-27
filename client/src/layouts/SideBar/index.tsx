@@ -5,10 +5,15 @@ import { X } from '@emotion-icons/octicons';
 import { css } from '@emotion/react';
 
 import styled from '@emotion/styled';
-import type { Category } from '../../types';
 import Toolbar from '../Toolbar';
+import { MinorHeading, StyledLink } from '../../components/Base';
+import type { ProductCategory } from '../../types/store.types';
 
-const StyledAside = styled.aside`
+interface StyledAsideProps {
+  isFilterOpen: boolean;
+}
+
+const StyledAside = styled.aside<StyledAsideProps>`
   grid-area: sidebar;
   background-color: lavender;
   border-radius: 6px;
@@ -18,7 +23,6 @@ const StyledAside = styled.aside`
   margin-left: 12px;
 
   h3 {
-    font-size: 1.2rem;
     font-weight: 500;
     margin-bottom: 8px;
   }
@@ -32,9 +36,6 @@ const StyledAside = styled.aside`
     margin-left: 8px;
     text-decoration: none;
     list-style: none;
-  }
-  ul li a {
-    text-decoration: none;
   }
 
   @media screen and (max-width: 600px) {
@@ -69,13 +70,8 @@ const StyledX = styled(X)`
   ${iconStyles}
 `;
 
-const StyledLink = styled.a`
-  cursor: pointer;
-  font-weight: ${(props) => (props.active ? '700' : '400')};
-`;
-
 interface SidebarProps {
-  onCategoryClick: (id: string) => Event;
+  onCategoryClick: (id: string) => Promise<void>;
 }
 
 const SideBar = ({ onCategoryClick }: SidebarProps): JSX.Element => {
@@ -89,16 +85,18 @@ const SideBar = ({ onCategoryClick }: SidebarProps): JSX.Element => {
     setFilterOpen(!isFilterOpen);
   };
 
-  const renderSubCategories = (selectedCategory): JSX.Element => {
+  const renderSubCategories = (selectedCategory: string): JSX.Element => {
     const subCategories = categories.filter(
-      (category: Category) => category.parent === selectedCategory
+      (category: ProductCategory) => category.parent === selectedCategory
     );
     return (
       <ul>
-        {subCategories.map(({ name, urlPath, id }) => (
+        {subCategories.map(({ name, urlPath, id }: ProductCategory) => (
           <li key={name}>
             <StyledLink
-              onClick={() => onCategoryClick(id)}
+              onClick={() => {
+                onCategoryClick(id);
+              }}
               active={id === activeCategory}
             >
               {name}
@@ -125,13 +123,15 @@ const SideBar = ({ onCategoryClick }: SidebarProps): JSX.Element => {
       <Toolbar toggleFilterOpen={toggleFilterOpen} />
       <StyledAside isFilterOpen={isFilterOpen}>
         <StyledX onClick={toggleFilterOpen} />
-        <h3>Kategorien</h3>
+        <MinorHeading>Kategorien</MinorHeading>
         {firstLevelCategories.length ? (
           <ul>
             {firstLevelCategories.map(({ name, urlPath, id }) => (
               <li key={name}>
                 <StyledLink
-                  onClick={() => onCategoryClick(id)}
+                  onClick={() => {
+                    onCategoryClick(id);
+                  }}
                   active={id === activeCategory}
                 >
                   {name}

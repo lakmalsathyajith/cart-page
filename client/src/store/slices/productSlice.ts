@@ -1,23 +1,25 @@
 import { createSlice } from '@reduxjs/toolkit';
-const initialState = {
+import { type ProductCategory, type AppState } from '../../types/store.types';
+
+const initialState: AppState = {
   categories: [],
   products: [],
   name: '',
   articleCount: 0,
   isLoading: false,
-  activeCategory: 0
+  activeCategory: ''
 };
 const productSlice = createSlice({
   name: 'categories',
   initialState,
   reducers: {
     addMeta: (state, action) => {
-      const { name, articleCount, id } = action.payload;
+      const { name, articleCount } = action.payload;
       state.name = name;
       state.articleCount = articleCount;
     },
     addCategories: (state, action) => {
-      const uniqueItems = action.payload.filter((newItem) => {
+      const uniqueItems = action.payload.filter((newItem: ProductCategory) => {
         return !state.categories.some(
           (existingItem) => existingItem.id === newItem.id
         );
