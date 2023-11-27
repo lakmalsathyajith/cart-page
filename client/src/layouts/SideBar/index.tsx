@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import type { RootState } from '../../store/store';
+import { X } from '@emotion-icons/octicons';
+import { css } from '@emotion/react';
 
 import styled from '@emotion/styled';
 import type { Category } from '../../types';
+import Toolbar from '../Toolbar';
 
 const StyledAside = styled.aside`
   grid-area: sidebar;
@@ -35,8 +38,35 @@ const StyledAside = styled.aside`
   }
 
   @media screen and (max-width: 600px) {
-    display: none;
+    display: ${(props) => (props.isFilterOpen ? 'block' : 'none')};
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    overflow: auto;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    margin-left: 0px;
   }
+`;
+
+const iconStyles = css`
+  width: 24px;
+  height: 24px;
+  margin: 0 16px;
+  cursor: pointer;
+  color: #333;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+
+  &:hover {
+    color: #007bff;
+  }
+`;
+
+const StyledX = styled(X)`
+  ${iconStyles}
 `;
 
 const StyledLink = styled.a`
@@ -49,11 +79,17 @@ interface SidebarProps {
 }
 
 const SideBar = ({ onCategoryClick }: SidebarProps): JSX.Element => {
+  const [isFilterOpen, setFilterOpen] = useState(true);
+
   const { categories, activeCategory } = useSelector(
     (state: RootState) => state.products
   );
 
-  const renderSubCategories = (selectedCategory) => {
+  const toggleFilterOpen = (): void => {
+    setFilterOpen(!isFilterOpen);
+  };
+
+  const renderSubCategories = (selectedCategory): JSX.Element => {
     const subCategories = categories.filter(
       (category: Category) => category.parent === selectedCategory
     );
@@ -85,26 +121,30 @@ const SideBar = ({ onCategoryClick }: SidebarProps): JSX.Element => {
   });
 
   return (
-    <StyledAside>
-      <h3>Kategorien</h3>
-      {firstLevelCategories.length ? (
-        <ul>
-          {firstLevelCategories.map(({ name, urlPath, id }) => (
-            <li key={name}>
-              <StyledLink
-                onClick={() => onCategoryClick(id)}
-                active={id === activeCategory}
-              >
-                {name}
-              </StyledLink>
-              {renderSubCategories(id)}
-            </li>
-          ))}
-        </ul>
-      ) : (
-        'Loading...'
-      )}
-    </StyledAside>
+    <>
+      <Toolbar toggleFilterOpen={toggleFilterOpen} />
+      <StyledAside isFilterOpen={isFilterOpen}>
+        <StyledX onClick={toggleFilterOpen} />
+        <h3>Kategorien</h3>
+        {firstLevelCategories.length ? (
+          <ul>
+            {firstLevelCategories.map(({ name, urlPath, id }) => (
+              <li key={name}>
+                <StyledLink
+                  onClick={() => onCategoryClick(id)}
+                  active={id === activeCategory}
+                >
+                  {name}
+                </StyledLink>
+                {renderSubCategories(id)}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          'Loading...'
+        )}
+      </StyledAside>
+    </>
   );
 };
 

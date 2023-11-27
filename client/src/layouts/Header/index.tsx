@@ -30,7 +30,7 @@ const StyledHeader = styled.header`
   }
 `;
 
-const Header = () => {
+const Header = (): JSX.Element => {
   return (
     <StyledHeader>
       <strong>home24</strong>

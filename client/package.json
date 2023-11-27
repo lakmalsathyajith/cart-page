@@ -6,6 +6,7 @@
   "license": "ISC",
   "dependencies": {
     "@apollo/client": "^3.8.7",
+    "@emotion-icons/octicons": "^3.27.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@reduxjs/toolkit": "^1.9.7",
@@ -27,8 +28,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "prettier --config .prettierrc 'src/**/*.ts' 'src/**/*.tsx' --write",
-    "lint": "eslint . --ext .tsx,.ts,.js,.jsx",
-    "schema": "npx apollo service:download --endpoint https://www.home24.de/graphql ./src/schema/schema.json"
+    "lint": "eslint . --ext .tsx,.ts,.js,.jsx"
   },
   "eslintConfig": {
     "extends": "react-app"

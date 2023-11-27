@@ -3,7 +3,6 @@ import type { ReactNode } from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
 import SideBar from '../SideBar';
-import Toolbar from '../Toolbar';
 
 import styled from '@emotion/styled';
 
@@ -47,7 +46,6 @@ const PageContainer = ({
   return (
     <StyledPage>
       <Header />
-      <Toolbar />
       <SideBar onCategoryClick={onCategoryClick} />
       <main>{children}</main>
       <Footer />
