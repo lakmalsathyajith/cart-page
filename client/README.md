@@ -38,7 +38,7 @@ Project is upgrade to `latest` react and typescript, to support latest features.
 
 Data fetching logic encapsulated in to a `custom hook` and the state is managed through `Redux`.
 
-`Styled-componenents` are used to manage the styling together with the componenent.
+`Styled-componenents(emotion)` are used to manage the styling together with the componenent.
 
 `Linters` are set to make sure the coding standards are maintained.
 
