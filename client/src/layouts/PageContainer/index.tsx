@@ -36,7 +36,7 @@ const StyledPage = styled.div`
 
 interface PageContainerProps {
   children?: ReactNode;
-  onCategoryClick: (id: string) => Promise<void>;
+  onCategoryClick: (id: string) => void;
 }
 
 const PageContainer = ({

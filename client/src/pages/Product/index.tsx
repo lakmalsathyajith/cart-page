@@ -7,8 +7,12 @@ import useCategoryQuery from '../../hooks/useCategoryQuery';
 const Product = (): JSX.Element => {
   const { reFetch } = useCategoryQuery(['156126'], `de_DE`);
 
-  const onCategoryClick = async (id: string): Promise<void> => {
-    await reFetch([id], `de_DE`);
+  const onCategoryClick = (id: string): void => {
+    (async () => {
+      await reFetch([id], `de_DE`);
+    })().catch((err) => {
+      console.error(err);
+    });
   };
 
   return (
