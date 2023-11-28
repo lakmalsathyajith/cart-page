@@ -1,44 +1,72 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# React Product page
 
-In the project directory, you can run:
+This is a simple React Js application which demonstrate a product display page of an e-commerce application
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## React JS 
+React is a popular open-source JavaScript library for building user interfaces (UIs) and user interface components. It was developed and is maintained by Facebook and a community of individual developers and companies. React is widely used for building dynamic and responsive web applications, and it has gained significant adoption in the web development industry.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Key features
+Component-Based Architecture
 
-### `npm test`
+Virtual DOM
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Declarative Syntax
 
-### `npm run build`
+JSX (JavaScript XML)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+State Management
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Unidirectional Data Flow
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Reusable Components
 
-### `npm run eject`
+Virtual DOM Diffing
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Lifecycle Methods (Class Components)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Hooks
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Acknowledgements
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Project is upgrade to `latest` react and typescript, to support latest features.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`Apollo client` is used to invoke GraphQL api.
+
+Data fetching logic encapsulated in to a `custom hook` and the state is managed through `Redux`.
+
+`Styled-componenents` are used to manage the styling together with the componenent.
+
+`Linters` are set to make sure the coding standards are maintained.
+
+The project is initiated using latest version of `react-create-app`.
+
+
+### Versions
+`React Js(v18.2.0), @emotion/styled(v11.11.0)`
+## Deployment
+
+To view in dev mode
+
+```bash
+  npm install | yarn install
+```
+
+To deploy and run locally
+
+```bash
+  npm start | yarn start
+```
+Follow the URL informs
+
+### Tests
+```bash
+  npm test | yarn test
+```
+## Authors
+
+- [@sathyajith](https://github.com/lakmalsathyajith)
+
