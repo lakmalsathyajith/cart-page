@@ -9,8 +9,7 @@ import {
   addActiveCategory
 } from '../store/slices/productSlice';
 
-import type { categoryQueryType } from '../types';
-import type { Category } from '../types';
+import type { categoryQueryType, Category } from '../types';
 
 const useCategoryQuery = (
   categoryId: string[],
