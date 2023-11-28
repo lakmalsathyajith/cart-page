@@ -30,7 +30,7 @@ const StyledToolbar = styled.section`
     justify-content: space-between;
     align-items: center;
     border-radius: 0px;
-    background-color: #fff;
+    background-color: var(--secondary-color);
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     margin: 0;
     width: 100%;
