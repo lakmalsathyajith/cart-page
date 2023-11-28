@@ -1,0 +1,1 @@
+I have use apollo client to access graphql api and Redux store is setup to store parsed data.

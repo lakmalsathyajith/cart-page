@@ -52,6 +52,7 @@ const StyledAside = styled.aside<StyledAsideProps>`
 `;
 
 const iconStyles = css`
+  display: none;
   width: 24px;
   height: 24px;
   margin: 0 16px;
@@ -64,6 +65,9 @@ const iconStyles = css`
   &:hover {
     color: #007bff;
   }
+  @media screen and (max-width: 600px) {
+    display: block;
+  }
 `;
 
 const StyledX = styled(X)`
@@ -71,7 +75,7 @@ const StyledX = styled(X)`
 `;
 
 interface SidebarProps {
-  onCategoryClick: (id: string) => Promise<void>;
+  onCategoryClick: (id: string) => void;
 }
 
 const SideBar = ({ onCategoryClick }: SidebarProps): JSX.Element => {
@@ -94,6 +98,7 @@ const SideBar = ({ onCategoryClick }: SidebarProps): JSX.Element => {
         {subCategories.map(({ name, urlPath, id }: ProductCategory) => (
           <li key={name}>
             <StyledLink
+              data-testid="sidebar-list-item"
               onClick={() => {
                 onCategoryClick(id);
               }}
@@ -129,6 +134,7 @@ const SideBar = ({ onCategoryClick }: SidebarProps): JSX.Element => {
             {firstLevelCategories.map(({ name, urlPath, id }) => (
               <li key={name}>
                 <StyledLink
+                  data-testid="sidebar-list-item"
                   onClick={() => {
                     onCategoryClick(id);
                   }}

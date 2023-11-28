@@ -35,5 +35,5 @@ export interface CategoryArticle {
   articles: Article[];
 }
 
-export * from './hooks.types'
-export * from './store.types'
+export * from './hooks.types';
+export * from './store.types';

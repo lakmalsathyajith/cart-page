@@ -73,7 +73,7 @@ const StyledProductDetails = styled.div`
 
 const Product = ({ article }: { article: Article }): JSX.Element => {
   return (
-    <StyledProduct>
+    <StyledProduct data-testid="product-component">
       <StyledProductImage>
         <img src={article.images[0].path} alt={article.name} />
       </StyledProductImage>

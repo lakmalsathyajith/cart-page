@@ -1,0 +1,95 @@
+{
+  "categories": [
+      {
+          "name": "Möbel",
+          "articleCount": 173688,
+          "id": "156126",
+          "childrenCategories": {
+              "list": [
+                  {
+                      "name": "Polstermöbel",
+                      "urlPath": "alle-polstermoebel/",
+                      "id": "156666",
+                      "__typename": "ProductList"
+                  },
+                  {
+                      "name": "Betten",
+                      "urlPath": "alle-betten/",
+                      "id": "177577",
+                      "__typename": "ProductList"
+                  },
+                  {
+                      "name": "Massivholzmöbel",
+                      "urlPath": "moebel-massivholz/",
+                      "id": "156658",
+                      "__typename": "ProductList"
+                  }
+              ],
+              "__typename": "ProductListCollection"
+          },
+          "categoryArticles": {
+              "articles": [
+                  {
+                      "name": "Lattenrost Driggs I",
+                      "variantName": "nicht verstellbar - Birke / Silber - 160 x 200cm",
+                      "prices": {
+                          "currency": "EUR",
+                          "regular": {
+                              "value": 20999,
+                              "__typename": "ArticleRegularPrice"
+                          },
+                          "__typename": "ArticlePrices"
+                      },
+                      "images": [
+                          {
+                              "path": "https://cdn1.home24.net/images/media/catalog/product/200x200/png/-/1/-1000201491-200226-15063500003-IMAGE-P000000001000201491.webp",
+                              "__typename": "ArticleGalleryImage"
+                          }
+                      ],
+                      "__typename": "Article"
+                  },
+                  {
+                      "name": "Schminktisch „Sherry“ Weiß Hochglanz mit",
+                      "variantName": "Weiß - Holz teilmassiv - 120 x 75 x 55 cm",
+                      "prices": {
+                          "currency": "EUR",
+                          "regular": {
+                              "value": 36990,
+                              "__typename": "ArticleRegularPrice"
+                          },
+                          "__typename": "ArticlePrices"
+                      },
+                      "images": [
+                          {
+                              "path": "https://cdn1.home24.net/images/media/catalog/product/200x200/png/b/f/bf4bfa1334da4f2d859661c9bcc82fff.cropped-99-30-770-944.processed.webp",
+                              "__typename": "ArticleGalleryImage"
+                          }
+                      ],
+                      "__typename": "Article"
+                  },
+                  {
+                      "name": "Federholzrahmen Colorado 28 NV",
+                      "variantName": "nicht verstellbar - 140 x 200cm",
+                      "prices": {
+                          "currency": "EUR",
+                          "regular": {
+                              "value": 10999,
+                              "__typename": "ArticleRegularPrice"
+                          },
+                          "__typename": "ArticlePrices"
+                      },
+                      "images": [
+                          {
+                              "path": "https://cdn1.home24.net/images/media/catalog/product/200x200/png/-/1/-1000281308-210723-12304400001-IMAGE-P000000001000281308.webp",
+                              "__typename": "ArticleGalleryImage"
+                          }
+                      ],
+                      "__typename": "Article"
+                  }
+              ],
+              "__typename": "ProductListArticles"
+          },
+          "__typename": "ProductList"
+      }
+  ]
+}
