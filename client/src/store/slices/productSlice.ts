@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { type ProductCategory, type AppState } from '../../types/store.types';
+import { type ProductCategory, type AppState } from '../../types';
 
 const initialState: AppState = {
   categories: [],

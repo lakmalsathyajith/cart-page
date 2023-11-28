@@ -7,7 +7,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import Toolbar from '../Toolbar';
 import { MinorHeading, StyledLink } from '../../components/Base';
-import type { ProductCategory } from '../../types/store.types';
+import type { ProductCategory } from '../../types';
 
 interface StyledAsideProps {
   isFilterOpen: boolean;
