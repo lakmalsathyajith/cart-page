@@ -10,12 +10,12 @@ const StyledButton = styled.button`
   text-align: center;
   width: 100%;
   border-radius: 4px;
-  background-color: #02a867;
-  color: #fff;
+  background-color: var(--button-color);
+  color: var(--text-color);
   padding: 6px;
 
   &:hover {
-    background-color: #2980b9;
+    opacity: 0.7;
   }
 `;
 

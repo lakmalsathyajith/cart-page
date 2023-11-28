@@ -14,7 +14,7 @@ const StyledPage = styled.div`
     'header header header'
     'sidebar content content'
     'footer footer footer';
-  background-color: #eaeaeb;
+  background-color: var(--primary-color);
 
   @media screen and (max-width: 600px) {
     grid-template-areas:

@@ -19,7 +19,7 @@ const StyledProduct = styled.article`
   flex-direction: column;
   position: relative;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: var(--secondary-color);
   justify-content: space-between;
 
   img {

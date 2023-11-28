@@ -92,6 +92,13 @@ const globalStyles = css`
     box-sizing: border-box;
   }
 
+  :root {
+    --primary-color: #eaeaeb;
+    --secondary-color: #fff;
+    --text-color: #fff;
+    --button-color: #02a867;
+  }
+
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
@@ -99,7 +106,6 @@ const globalStyles = css`
       'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #eaeaeb;
   }
 `;
 

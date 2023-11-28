@@ -10,7 +10,7 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   border-radius: 6px;
-  background-color: #fff;
+  background-color: var(--secondary-color);
   box-shadow: inset 0 -8px 8px -8px rgba(0, 0, 0, 0.2);
 
   input {

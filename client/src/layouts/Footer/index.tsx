@@ -8,7 +8,7 @@ const StyledFooter = styled.footer`
   text-align: center;
   padding: 8px;
   border-radius: 6px;
-  background-color: #fff;
+  background-color: var(--secondary-color);
 
   @media screen and (max-width: 600px) {
     box-shadow: unset;
